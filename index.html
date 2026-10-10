@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Sudoku Solver</h1>
+        <p id="greeting">Welcome! What should we call you?</p>
+        <form id="name-form">
+            <label for="name-input">Your name</label>
+            <div class="name-controls">
+                <input id="name-input" type="text" maxlength="30" autocomplete="given-name" required>
+                <button type="submit">Save</button>
+            </div>
+        </form>
+
+        <div class="modes" role="group" aria-label="Choose a mode">
+            <button id="play-mode" type="button" aria-pressed="true">Play Mode</button>
+            <button id="solve-mode" type="button" aria-pressed="false">Solve Mode</button>
+        </div>
+        <p id="mode-description"></p>
+        <div id="grid" role="group" aria-label="Sudoku board" aria-describedby="grid-help"></div>
+        <p id="grid-help">Enter 1–9. Use arrow keys to move and Backspace or Delete to clear.</p>
+
+        <div class="actions">
+            <button id="new-puzzle" type="button">New Puzzle</button>
+            <button id="solve" type="button" class="primary">Solve</button>
+            <button id="reset" type="button">Reset</button>
+            <button id="check" type="button">Check</button>
+        </div>
+        <p id="message" role="status" aria-live="polite"></p>
+    </main>
+</body>
+</html>
